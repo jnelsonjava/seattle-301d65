@@ -182,17 +182,17 @@ Student.prototype.scope = function() {
 };
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(joe.scope());
+console.log(joe.scope());
 
 Student.prototype.scopeArrow = () => console.log(this);
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(joe.scopeArrow());
+console.log(joe.scopeArrow());
 
 // TODO: Write a COMMENT below to answer the following questions.
 // 1. What is "this" when joe.scope() is invoked?
-//
+//    - "this" is joe, the Student instance created on line 149.
 // 2. What is "this" when joe.scopeArrow() is invoked?
-//
+//    - "this" is the browser Window object.
 // 3. Explain why "this" is different when an arrow function is used.
-//
+//    - Arrow functions don't work for contructors or methods because they don't create their own "this". Instead "this" ends up referring to the nearest object's "this", which is the browser running the JS.
