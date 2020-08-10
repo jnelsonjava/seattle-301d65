@@ -1,0 +1,7 @@
+li:nth-child(2n) div {
+  background-color: green;
+}
+
+li:nth-child(2n + 1) div {
+  background-color: red;
+}

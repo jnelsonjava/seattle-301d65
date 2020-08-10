@@ -1,0 +1,31 @@
+.box-shadow-menu {
+  position: relative;
+  padding-left: 1.25em;
+}
+.box-shadow-menu:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.25em;
+  width: 1em;
+  height: 0.15em;
+  background: black;
+  box-shadow: 
+    0 0.25em 0 0 black,
+    0 0.5em 0 0 black;
+}
+
+nav a:nth-child(1), nav a:nth-child(2) {
+  background-color: darkgray;
+  border: #111 1px solid;
+  border-radius: 20px;
+}
+
+li {
+  border: 1px solid #111;
+  border-radius: 20px;
+}
+
+li > div{
+  background-color: orange;
+}
