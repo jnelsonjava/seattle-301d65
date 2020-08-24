@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Shopping Cart</h1>
+  <nav>
+    <ul>
+      <li><a href="">Shopping list</a></li>
+      <li><a href="">Store</a></li>
+    </ul>
+  </nav>
+
+  <h1>Store : <%= storeName %></h1>
+  
+  <% console.log('Guess where I will log'); %>
+
+  <ul>
+    <% for(let i = 0; i < itemObjectArray.length; i++){ %>
+      <li><%= itemObjectArray[i].name %> : quantity <%= itemObjectArray[i].quantity %></li>
+    <% } %>
+    
+  </ul>
+
+  <ul>
+    <% for(let i = 0; i < itemsPotato.length; i++){ %>
+      <li><%= itemsPotato[i]%></li>
+    <% } %>
+  </ul>
+
+
+
+  <ul>
+    <% for(let i = 0; i < 20; i++){ %>
+      <li>
+        <article>
+        <h2>You made this</h2>
+        <p>this is so cool</p>
+        <img src="http://placehold.it/200x200" alt="">
+        </article>
+      </li>
+    <% }; %>
+  </ul>
+
+
+
+  <ul>
+    <li>milk</li>
+    <li>juice</li>
+    <li>cookies</li>
+    <li>ice cream</li>
+    <li>r2d2</li>
+  </ul>
+
+  <ul>
+    <li>milk : quantity 1</li>
+    <li>juice : quantity 2</li>
+    <li>cookies : quantity 5</li>
+    <li>ice cream : quantity 2</li>
+    <li>r2d2 bag : quantity 100</li>
+
+  </ul>
+</body>
+
+</html>

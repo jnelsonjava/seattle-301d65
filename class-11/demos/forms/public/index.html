@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Form Demo</h1>
+
+  <form action="/talk-to-nich"> <!-- Action of a form is like the address of a form - route it talks to -->
+    <fieldset>
+      <legend>Contact Me</legend>
+      <label for="name">From :</label>
+      <input type="text" name="name">
+      <label for="message">Message :</label>
+      <input type="text" name="message">
+      <input type="submit" value="Send a message">
+    </fieldset>
+  </form>
+
+  <form action="/login" method="POST"> <!--method === type of request -->
+    <fieldset>
+      <legend>Login</legend>
+      <label for="username">uname</label>
+      <input type="text" name="username">
+      <label for="password">pass</label>
+      <input type="password" name="password">
+      <input type="submit" value="login">
+    </fieldset>
+  </form>
+</body>
+</html>
+
+<!-- http://localhost:3001/?name=Nicholas&message=Have+a+great+day+man -->
+<!-- api url request -->
+<!-- locationiq.com?q=seattle -->
+<!-- ?name=Nicholas === query parameter `name` with value of nicholas -->
+<!-- ?message=have a great day === query parameter `message` with value of have a great day -->
+
+
+
+<!-- login route's url, url's are basically public -->
+<!-- http://localhost:3001/login?username=marchael&password=1234 -->
