@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <%- include('../layout/header') %>
+
+  <h1>Add a Task</h1>
+
+  <form action="/tasks" method="POST"><!-- Name the GET, POST, PUT, DELETE the same for a single resource-->
+    <fieldset>
+      <legend>New Task</legend>
+      <label for="task">Task</label>
+      <input type="text" name="task">
+      <label for="criteria">criteria</label>
+      <input type="text" name="criteria">
+      <label for="repeats">repeats</label>
+      <input type="checkbox" name="repeats">
+      <label for="frequency">frequency</label>
+      <input type="number" name="frequency">
+      <label for="category">category</label>
+      <input type="text" name="category">
+
+      <input type="submit" value="add task">
+    </fieldset>
+  </form>
+</body>
+</html>

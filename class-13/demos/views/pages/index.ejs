@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <%- include('../layout/header') %>
+
+  <h1>My Todos</h1>
+
+  <ul>
+    <% todos.forEach(todo => { %>
+      <li>
+        <h2>
+          <a href="/tasks/<%= todo.id %>"><%= todo.task %> - <%= todo.category %></a>
+        </h2>
+        <p>Due <%= new Date(todo.deadline).toDateString() %> <%= todo.repeats ? '(repeats)' : '' %></p>
+        <p><%= todo.criteria %></p>
+
+        <form action="/tasks/<%= todo.id %>?_method=DELETE" method="POST">
+          <input type="submit" value="delete book">
+        </form>
+
+        <form action="/tasks/<%= todo.id %>?_method=PUT" method="POST">
+          task : <input type="text" name="task">
+          crit : <input type="text" name="criteria">
+
+          <input type="submit" value="update book">
+        </form>
+      </li>
+    <% }) %>
+    
+  </ul>
+</body>
+</html>
